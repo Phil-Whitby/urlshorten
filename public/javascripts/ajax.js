@@ -1,12 +1,15 @@
 
 
 $('button').on('click', function(){
-
-$.ajax('http://188.166.175.122/routes/shorten', {
+var URL = $('input[name="url"]').val();
+$.ajax('http://188.166.175.122:3000/shorten', {
      crossDomain:true,
      method: 'post',
+     data: {
+       url:
+     }
      success: function(data) {
-       $.ajax('http://188.166.175.122/routes/shorten', {
+       $.ajax('http://188.166.175.122:3000/shorten', {
             crossDomain:true,
             method: 'get',
             success: function(data) {
