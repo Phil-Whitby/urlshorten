@@ -9,15 +9,8 @@ $.ajax('http://188.166.175.122:3000/shorten', {
        url:URL
      },
      success: function(data) {
-       alert ('post')
-       $.ajax('http://188.166.175.122:3000/shorten', {
-            crossDomain:true,
-            method: 'get',
-            success: function(data) {
-
-                $('#url-field').val(data.shortURL);
-            }
-        });
-      }
+       alert ('post');
+       $('#url-field').val(data);
+     }
     });
   });

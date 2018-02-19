@@ -17,13 +17,13 @@ var url = new Schema({
 
 //3.define model
 
-var urlModel = mongoose.model("URL", url);
+var urlModel = mongoose.model("URL2", url);
 
 
 
 //5. create if/else statement  to perform get request
 router.get('/', function(req, res, next){
-
+	console.log('brpppppp');
   urlModel.findOne({urlId:req.query.urlId}, function(err, url){
   res.json(url);
   });
