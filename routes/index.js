@@ -29,8 +29,8 @@ var urlModel = mongoose.model("url2", url);
 router.get('/:shortURL', function(req, res, next){
   console.log(req.params);
   var id = req.params.shortURL;
-	console.log('http://188.166.175.122:3000/' + req.params.shortURL);
-  urlModel.findOne({shortURL: 'http://188.166.175.122:3000/' + req.params.shortURL}, function(err, url){
+	console.log('http://159.65.56.80:3000/' + req.params.shortURL);
+  urlModel.findOne({shortURL: 'http://159.65.56.80:3000/' + req.params.shortURL}, function(err, url){
 	if (url == null) {
 		res.send("Couldn't find link");
 	} else {

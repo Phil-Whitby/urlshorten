@@ -40,7 +40,7 @@ router.post('/', function(req, res, next) {
 
       urlId: randomurl,
       url: req.body.url,
-      shortURL: 'http://188.166.175.122:3000/' + randomurl
+      shortURL: 'http://159.65.56.80:3000/' + randomurl
 
   });
   console.log('there');
@@ -49,7 +49,7 @@ console.log('you')
       if(err){
         res.send("not ok");
       }else{
-        res.send('http://188.166.175.122:3000/' + randomurl);
+        res.send('http://159.65.56.80:3000/' + randomurl);
       }
     })
 }
